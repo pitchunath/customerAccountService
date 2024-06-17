@@ -36,7 +36,7 @@ public class SecurityConfig {
     public UserDetailsService userDetailsService() {
         UserDetails user = User.builder()
             .username("user")
-            .password(passwordEncoder().encode("user"))
+            .password(passwordEncoder().encode("user")) // should be moved to keyvault
             .roles("USER")
             .build();
 
