@@ -1,0 +1,26 @@
+[
+  {
+    "code": "CAS0001",
+    "message": "Active accounts associated with customer"
+  },
+  {
+    "code": "CAS0002",
+    "message": "Accounts associated with the customer has available balances.please close it before deleting"
+  },
+  {
+    "code": "CAS0003",
+    "message": "One or both accounts involved in the transfer is not active"
+  },
+  {
+    "code": "CAS0004",
+    "message": "Transaction amount should be greater than 0."
+  },
+  {
+    "code": "CAS0005",
+    "message": "Active accounts cannot be deleted"
+  },
+  {
+    "code": "CAS0006",
+    "message": "Account has balance available.please close it before deleting"
+  }
+]
