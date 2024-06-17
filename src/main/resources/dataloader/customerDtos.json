@@ -1,9 +1,14 @@
 [
   {
     "name": "customer 1",
-    "email": "customer1@testdomain.com"},
-
+    "email": "customer1@testdomain.com",
+    "age": 18,
+    "type": "BASIC"
+  },
   {
     "name": "customer 2",
-    "email": "customer2@testdomain.com"}
+    "email": "customer2@testdomain.com",
+    "age": 18,
+    "type": "BASIC"
+  }
 ]

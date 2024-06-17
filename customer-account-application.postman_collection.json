@@ -13,8 +13,36 @@
 				{
 					"name": "Get Customer by Id",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8090/api/customers/{customerId}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8090",
+							"path": [
+								"api",
+								"customers",
+								"{customerId}"
+							]
+						}
 					},
 					"response": []
 				},
@@ -63,7 +91,7 @@
 					"response": []
 				},
 				{
-					"name": "create customer Copy",
+					"name": "update customer by id",
 					"request": {
 						"auth": {
 							"type": "basic",
@@ -84,7 +112,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"prasath\",\r\n    \"email\": \"prasath@example.com\"\r\n}",
+							"raw": "{\r\n    \"name\": \"prasath\",\r\n    \"email\": \"prasath@example.com\",\r\n    \"age\": 16,\r\n    \"type\": \"PREMIUM\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -108,19 +136,19 @@
 					"response": []
 				},
 				{
-					"name": "Delete Customer by Id Copy",
+					"name": "Delete Customer by Id",
 					"request": {
 						"auth": {
 							"type": "basic",
 							"basic": [
 								{
 									"key": "password",
-									"value": "user",
+									"value": "admin",
 									"type": "string"
 								},
 								{
 									"key": "username",
-									"value": "user",
+									"value": "admin",
 									"type": "string"
 								}
 							]
@@ -128,7 +156,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/customers/1",
+							"raw": "http://localhost:8090/api/customers/{customerId}",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -137,7 +165,7 @@
 							"path": [
 								"api",
 								"customers",
-								"1"
+								"{customerId}"
 							]
 						}
 					},
@@ -205,10 +233,25 @@
 				{
 					"name": "Delete Account by id",
 					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "user",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/accounts/1",
+							"raw": "http://localhost:8090/api/accounts/{accountId}",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -217,7 +260,7 @@
 							"path": [
 								"api",
 								"accounts",
-								"1"
+								"{accountId}"
 							]
 						}
 					},
@@ -245,7 +288,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"fromAccountId\": 1,\r\n    \"toAccountId\": 4,\r\n    \"amount\": 1000\r\n}",
+							"raw": "{\r\n    \"fromAccountId\": 1,\r\n    \"toAccountId\": 2,\r\n    \"amount\": 1000\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

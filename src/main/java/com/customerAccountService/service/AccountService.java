@@ -64,7 +64,7 @@ public class AccountService {
 
     public void deleteAccount(Long accountId) {
         Account account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new CustomerNotFoundException("Customer not found"));
+                .orElseThrow(() -> new AccountNotFoundException("Account not found"));
         validationService.validate("deleteAccountValidationHandler", convertToAccountDTO(account));
         accountRepository.deleteById(accountId);
     }

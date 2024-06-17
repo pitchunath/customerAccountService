@@ -1,5 +1,6 @@
 package com.customerAccountService.service;
 
+import com.customerAccountService.error.exception.AccountNotFoundException;
 import com.customerAccountService.error.exception.CustomerNotFoundException;
 import com.customerAccountService.error.exception.InsufficientBalanceException;
 import com.customerAccountService.model.entity.Account;
@@ -132,7 +133,7 @@ class AccountServiceTest {
     void testDeleteAccount_AccountNotFound() {
         when(accountRepository.findById(1L)).thenReturn(Optional.empty());
 
-        assertThrows(CustomerNotFoundException.class, () -> accountService.deleteAccount(1L));
+        assertThrows(AccountNotFoundException.class, () -> accountService.deleteAccount(1L));
 
         verify(accountRepository).findById(1L);
         verify(validationService, never()).validate(anyString(), any(AccountDTO.class));
