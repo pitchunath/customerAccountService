@@ -7,7 +7,10 @@ The application itself used in-memory sql database for now.
 It includes CRUD operations for customers and accounts, as well as facilities for transferring funds between accounts.
 This application can be used for maintaining customers and accounts(amount balances) associated with them along with custom
 validations.
+
+
 For Security of the application, Spring Security is used.
+
 For now two roles have been defined User and Admin.
 _**Privileged operations like deletion of customer account has been currently enabled only for Admin users.**_
 
@@ -15,13 +18,21 @@ _**Privileged operations like deletion of customer account has been currently en
 This Service features the following functionalities on high level
 
 Customer CRUD Operations: Create, Read, Update, and Delete customers.
+
+
 Account CRUD Operations: Create, Read, Update, and Delete accounts associated with customers.
+
+
 Transfer Funds: Transfer funds between accounts with validation.
 
 ## Swagger API Documentation
 Swagger UI is integrated into the application to facilitate API exploration and testing.
+
+
 `To access Swagger UI`:
 Open a web browser and go to http://localhost:8090/swagger-ui/
+
+
 Use the UI to view all available endpoints, their details, request/response formats, and execute API requests directly.
 
 
@@ -35,7 +46,7 @@ Use the UI to view all available endpoints, their details, request/response form
 First clone the repo
 
 ```shell
-git clone https://github.com/RoyalAholdDelhaize/ah-commerce-ofms-request-handler.git
+git clone https://github.com/pitchunath/customerAccountService.git
 ```
 Build application by changing into the cloned directory and running the command below in project root
 ```bash
